@@ -176,6 +176,35 @@ mjx-container[display="true"] + br {
                             <li class="directory">
                                 <a href="#" class="directory">
                                     <i class="fa fa-folder"></i>
+                                    C++
+                                </a>
+                                
+                    <ul class="fileui">
+                        <li class="file">
+                            <a href="/2024/09/20/LearnDoc/C++/C++Primier笔记/" class="file">
+                                <i class="fa fa-file"></i>
+                                C++Primier笔记
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="fileui">
+                        <li class="file">
+                            <a href="/2024/11/04/LearnDoc/C++/设计模式笔记/" class="file">
+                                <i class="fa fa-file"></i>
+                                设计模式笔记
+                            </a>
+                        </li>
+                    </ul>
+    
+                            </li>
+                            
+                        </ul>
+    
+                        <ul class="directoryui">
+                            <li class="directory">
+                                <a href="#" class="directory">
+                                    <i class="fa fa-folder"></i>
                                     CSharp学习
                                 </a>
                                 
@@ -277,9 +306,27 @@ mjx-container[display="true"] + br {
     
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/08/02/LearnDoc/杂项/一些学习网站/" class="file">
+                            <a href="/2024/10/21/LearnDoc/杂项/vacode备忘/" class="file">
                                 <i class="fa fa-file"></i>
-                                一些学习网站
+                                vacode备忘
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="fileui">
+                        <li class="file">
+                            <a href="/2024/08/02/LearnDoc/杂项/学习网站,书籍与视频/" class="file">
+                                <i class="fa fa-file"></i>
+                                学习网站,书籍与视频
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="fileui">
+                        <li class="file">
+                            <a href="/2024/12/04/LearnDoc/杂项/小工具接口/" class="file">
+                                <i class="fa fa-file"></i>
+                                小工具接口
                             </a>
                         </li>
                     </ul>
@@ -296,6 +343,24 @@ mjx-container[display="true"] + br {
                                 </a>
                                 
                     <ul class="fileui">
+                        <li class="file">
+                            <a href="/2024/09/13/LearnDoc/游戏开发/内存优化/" class="file">
+                                <i class="fa fa-file"></i>
+                                内存优化
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="fileui">
+                        <li class="file">
+                            <a href="/2024/09/12/LearnDoc/游戏开发/打包/" class="file">
+                                <i class="fa fa-file"></i>
+                                打包
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="fileui">
                         <li class="file active">
                             <a href="/2024/08/05/LearnDoc/游戏开发/游戏动画优化/" class="file">
                                 <i class="fa fa-file"></i>
@@ -306,9 +371,9 @@ mjx-container[display="true"] + br {
     
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/07/30/LearnDoc/游戏开发/游戏框架概述/" class="file">
+                            <a href="/2024/07/30/LearnDoc/游戏开发/游戏框架探索/" class="file">
                                 <i class="fa fa-file"></i>
-                                游戏框架概述
+                                游戏框架探索
                             </a>
                         </li>
                     </ul>
@@ -404,6 +469,15 @@ mjx-container[display="true"] + br {
                                 
                     <ul class="fileui">
                         <li class="file">
+                            <a href="/2024/10/10/LearnDoc/编曲/乐器法/" class="file">
+                                <i class="fa fa-file"></i>
+                                乐器法
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="fileui">
+                        <li class="file">
                             <a href="/2024/08/05/LearnDoc/编曲/乐理基础/" class="file">
                                 <i class="fa fa-file"></i>
                                 乐理基础
@@ -433,13 +507,37 @@ mjx-container[display="true"] + br {
         <div id="content">
             
 <div id="article">
-    <h4 id="引擎-instancing-方案">引擎 instancing 方案</h4>
-<p>在gpu上计算动画以及保存蒙皮矩阵，会增加显存消耗但减少了cpu占用</p>
-<h4 id="蒙皮数据的压缩">蒙皮数据的压缩</h4>
+    <p>总的来说游戏动画优化主要是两个方面，一是压缩动画大小，减轻动画的资源加载压力；二是想办法降帧，减少更新物体来缓解计算压力，再有就是其他的特殊方案，比如说把一部分计算扔到gpu上去并行计算</p>
+<h2 id="关于压缩">关于压缩</h2>
+<h3 id="减少动画的float数据">减少动画的float数据</h3>
+<ul>
+<li>fbx文件中动画导入设置里的Anim.Compression和erro设置</li>
+<li>代码处理，读取动画曲线的关键帧，对于一些类似0.00000000213的数据可以直接改为0</li>
+</ul>
+<h3 id="帧裁剪">帧裁剪</h3>
+<ul>
+<li>对于一些帧密集的地方进行裁剪，甚至使用代码进行帧过渡</li>
+<li>对于一些没有变化的帧进行裁剪</li>
+<li>scale曲线剔除</li>
+</ul>
+<h3 id="蒙皮数据的压缩">蒙皮数据的压缩</h3>
 <p>https://diglib.eg.org/items/faa237c0-8594-4cdf-bda5-693102d11b55
+https://blog.codingnow.com/2022/04/vertex_blend_attribute_compression.html
 基本目标就是: 1.蒙皮的权重根本不需要float那么高精度,可以压缩
 2.四个float可以压成三个，因为权重和为1，第四个可以算出来
 5.可以将权重组合全都记下来，蒙皮数据只记索引</p>
+<h2 id="关于减帧">关于减帧</h2>
+<h3 id="动画添加lod">动画添加LOD</h3>
+<ul>
+<li>远处的动画降低更新频率</li>
+<li>远处的动画用更简单的骨骼代理</li>
+</ul>
+<h3 id="相机裁剪">相机裁剪</h3>
+<p>unity官方的回答是可以将 Animator 的 Culling Mode 设置为 Based on
+Renderers 来优化动画，并禁用蒙皮网格渲染器的 Update When Offscreen
+属性。这样即可在角色不可见时让Unity不必更新动画。</p>
+<h4 id="引擎-instancing-方案">引擎 instancing 方案</h4>
+<p>在gpu上计算动画以及保存蒙皮矩阵，会增加显存消耗但减少了cpu占用</p>
 
 </div>
 

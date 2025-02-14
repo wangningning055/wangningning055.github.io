@@ -127,7 +127,7 @@ function pjaxLoad(){
         showArticleIndex();
         console.log(e.relatedTarget.className)
         $("pre code").each(function (i, block){
-            hljs.highlightElement(block);
+            //hljs.highlightElement(block);
         });
         if(e.relatedTarget.className == "file")
         {

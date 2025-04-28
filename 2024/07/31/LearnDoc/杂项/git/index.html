@@ -98,9 +98,9 @@
                                 
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/08/05/LearnDoc/CSharp学习/CLR_via_cSharp读书笔记/" class="file">
+                            <a href="/2025/04/28/LearnDoc/CSharp学习/CLR_via_cSharp笔记/" class="file">
                                 <i class="fa fa-file"></i>
-                                CLR_via_cSharp读书笔记
+                                CLR_via_cSharp笔记
                             </a>
                         </li>
                     </ul>
@@ -299,6 +299,15 @@
     
                     <ul class="fileui">
                         <li class="file">
+                            <a href="/2025/03/31/LearnDoc/游戏服务器/传输数据压缩/" class="file">
+                                <i class="fa fa-file"></i>
+                                传输数据压缩
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="fileui">
+                        <li class="file">
                             <a href="/2024/08/05/LearnDoc/游戏服务器/基础/" class="file">
                                 <i class="fa fa-file"></i>
                                 基础
@@ -326,15 +335,6 @@
                                     绘画
                                 </a>
                                 
-                    <ul class="fileui">
-                        <li class="file">
-                            <a href="/2024/08/13/LearnDoc/绘画/光影学习/" class="file">
-                                <i class="fa fa-file"></i>
-                                光影学习
-                            </a>
-                        </li>
-                    </ul>
-    
                     <ul class="fileui">
                         <li class="file">
                             <a href="/2024/07/30/LearnDoc/绘画/透视学习/" class="file">
@@ -395,28 +395,29 @@
         <div id="content">
             
 <div id="article">
-    <h4 id="git添加文件到暂存区"><a class="markdownIt-Anchor" href="#git添加文件到暂存区"></a> git添加文件到暂存区</h4>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">git add &lt;file&gt;<br>git add . //添加所有文件<br><br></code></pre></td></tr></table></figure>
-<h4 id="git-提交更改"><a class="markdownIt-Anchor" href="#git-提交更改"></a> git 提交更改</h4>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git commit -m &quot;commit message&quot;<br></code></pre></td></tr></table></figure>
-<h4 id="git拉取并合并"><a class="markdownIt-Anchor" href="#git拉取并合并"></a> git拉取并合并</h4>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git pull<br></code></pre></td></tr></table></figure>
-<h4 id="git查看分支"><a class="markdownIt-Anchor" href="#git查看分支"></a> git查看分支</h4>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git branch<br></code></pre></td></tr></table></figure>
-<h4 id="git推送到远程仓库"><a class="markdownIt-Anchor" href="#git推送到远程仓库"></a> git推送到远程仓库</h4>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git push origin &lt;branch-name&gt;<br></code></pre></td></tr></table></figure>
-<h4 id="git只拉取不合并"><a class="markdownIt-Anchor" href="#git只拉取不合并"></a> git只拉取不合并</h4>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git fetch<br></code></pre></td></tr></table></figure>
-<h4 id="git分支合并"><a class="markdownIt-Anchor" href="#git分支合并"></a> git分支合并</h4>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git merge dev（把dev分支合并到当前分支）<br></code></pre></td></tr></table></figure>
-<h4 id="git连接不上刷新dns"><a class="markdownIt-Anchor" href="#git连接不上刷新dns"></a> git连接不上，刷新dns</h4>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs shell">本地：<br>git config --global --unset http.proxy<br>git config --global --unset https.proxy<br>挂梯子：<br>git config --global http.proxy 127.0.0.1:7890<br>git config --global https.proxy 127.0.0.1:7890<br>//7890是梯子的端口号<br></code></pre></td></tr></table></figure>
-<h4 id="git-完全取消最近的提交并回退到上一个状态"><a class="markdownIt-Anchor" href="#git-完全取消最近的提交并回退到上一个状态"></a> git 完全取消最近的提交并回退到上一个状态</h4>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">git <span class="hljs-keyword">reset</span> <span class="hljs-comment">--hard HEAD~1</span><br></code></pre></td></tr></table></figure>
-<h4 id="刷新dns缓存"><a class="markdownIt-Anchor" href="#刷新dns缓存"></a> 刷新DNS缓存</h4>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile"><span class="hljs-keyword">cmd</span><span class="language-bash">中运行： ipconfig/flushdns</span><br></code></pre></td></tr></table></figure>
-<h4 id="hexo-常用指令"><a class="markdownIt-Anchor" href="#hexo-常用指令"></a> hexo 常用指令</h4>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs css">hexo重新生成： hexo <span class="hljs-selector-tag">g</span><br>hexo清理生成文件夹： hexo clean<br>hexo本地运行： hexo s<br>hexo部署站点： hexo d<br></code></pre></td></tr></table></figure>
+    <h4 id="git添加文件到暂存区">git添加文件到暂存区</h4>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">git add &lt;file&gt;<br>git add . //添加所有文件<br><br></code></pre></td></tr></table></figure>
+<h4 id="git-提交更改">git 提交更改</h4>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">git commit -m &quot;commit message&quot;<br></code></pre></td></tr></table></figure>
+<h4 id="git拉取并合并">git拉取并合并</h4>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">git pull<br></code></pre></td></tr></table></figure>
+<h4 id="git查看分支">git查看分支</h4>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">git branch<br></code></pre></td></tr></table></figure>
+<h4 id="git推送到远程仓库">git推送到远程仓库</h4>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">git push origin &lt;branch-name&gt;<br></code></pre></td></tr></table></figure>
+<h4 id="git只拉取不合并">git只拉取不合并</h4>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">git fetch<br></code></pre></td></tr></table></figure>
+<h4 id="git分支合并">git分支合并</h4>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">git merge dev（把dev分支合并到当前分支）<br></code></pre></td></tr></table></figure>
+<h4 id="git连接不上刷新dns">git连接不上，刷新dns</h4>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">本地：<br>git config --global --unset http.proxy<br>git config --global --unset https.proxy<br>挂梯子：<br>git config --global http.proxy 127.0.0.1:7890<br>git config --global https.proxy 127.0.0.1:7890<br>//7890是梯子的端口号<br></code></pre></td></tr></table></figure>
+<h4 id="git-完全取消最近的提交并回退到上一个状态">git
+完全取消最近的提交并回退到上一个状态</h4>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">git <span class="hljs-keyword">reset</span> <span class="hljs-comment">--hard HEAD~1</span><br></code></pre></td></tr></table></figure>
+<h4 id="刷新dns缓存">刷新DNS缓存</h4>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><code class="hljs dockerfile"><span class="hljs-keyword">cmd</span><span class="language-bash">中运行： ipconfig/flushdns</span><br></code></pre></td></tr></table></figure>
+<h4 id="hexo-常用指令">hexo 常用指令</h4>
+<figure class="highlight css"><table><tr><td class="code"><pre><code class="hljs css">hexo重新生成： hexo <span class="hljs-selector-tag">g</span><br>hexo清理生成文件夹： hexo clean<br>hexo本地运行： hexo s<br>hexo部署站点： hexo d<br></code></pre></td></tr></table></figure>
 
 </div>
 

@@ -4,14 +4,17 @@
     padding: 0;
     border: 0;
 }
-
+.hljs-comment {
+    opacity: 1 !important;  /* 确保注释部分完全不透明 */
+    color: #0074f8; /* 或者你可以根据需求调整颜色 */
+}
 html, body{
     height: 100%;
-    /* background: rgba(255, 255, 255, 0.8) */
+    /*background: rgba(255, 255, 255, 0.8)*/
     /* background: url("/images/back.jpg") no-repeat center center fixed; */
     background: url("/images/b6.jpg") no-repeat center center fixed;
     
-    background-size: cover;
+    /*background-size: cover;*/
     /* background: #414f50; */
 
 }
@@ -52,7 +55,7 @@ nav {
 #body::-webkit-scrollbar-thumb
 {
     border-radius: 10px;
-    box-shadow: inset 0 0 6px rgba(165, 118, 172, 0.3);
+    box-shadow: inset 0 0 6px rgba(35, 1, 41, 0.3);
     background-color: rgba(141, 22, 92, 0.3);
 }
 #body::-webkit-scrollbar-track
@@ -60,7 +63,6 @@ nav {
     box-shadow: inset 0 0 6px rgba(231, 145, 145, 0.3);
     border-radius: 10px;
     background-color: rgba(141, 22, 92, 0.3);
-
 }
 
 
@@ -68,7 +70,7 @@ nav {
 #main2{
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.507);
     position: fixed;
     z-index: 1;
 }
@@ -280,10 +282,10 @@ aside #tree i.fa {
 
 #article code {
     border-radius: 9px;
-    box-shadow: 0px 0px 5px #999;
+    box-shadow: 0px 0px 5px #ebc4c4;
     margin-left: auto;
     right: 0;
-    background: #ce528c3f;
+    background: #ffffff3f;
 }
 
 #article img {
@@ -323,7 +325,7 @@ aside #tree i.fa {
   font-size: 18px;
   text-align: left;
   line-height: 35px;
-  color: #ffffff00;
+  color: #e9050500;
 }
 
 #article table tr:nth-child(odd) {

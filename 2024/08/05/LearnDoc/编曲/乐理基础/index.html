@@ -12,8 +12,11 @@
     
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-    
+    <!--
 <link rel="stylesheet" href="/lib/highlight/styles/atom-one-light.css">
+-->
+    
+<link rel="stylesheet" href="/lib/highlight/styles/brown-paper.css">
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body id="body">
@@ -122,9 +125,47 @@
                             <li class="directory">
                                 <a href="#" class="directory">
                                     <i class="fa fa-folder"></i>
+                                    unity
+                                </a>
+                                
+                    <ul class="fileui">
+                        <li class="file">
+                            <a href="/2025/05/20/LearnDoc/unity/UnityShader入门精要笔记/" class="file">
+                                <i class="fa fa-file"></i>
+                                UnityShader入门精要笔记
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="fileui">
+                        <li class="file">
+                            <a href="/2025/04/29/LearnDoc/unity/unity协程/" class="file">
+                                <i class="fa fa-file"></i>
+                                unity协程
+                            </a>
+                        </li>
+                    </ul>
+    
+                            </li>
+                            
+                        </ul>
+    
+                        <ul class="directoryui">
+                            <li class="directory">
+                                <a href="#" class="directory">
+                                    <i class="fa fa-folder"></i>
                                     图形学
                                 </a>
                                 
+                    <ul class="fileui">
+                        <li class="file">
+                            <a href="/2025/05/23/LearnDoc/图形学/图形学中的线性代数/" class="file">
+                                <i class="fa fa-file"></i>
+                                图形学中的线性代数
+                            </a>
+                        </li>
+                    </ul>
+    
                     <ul class="fileui">
                         <li class="file">
                             <a href="/2024/07/31/LearnDoc/图形学/虎书笔记/" class="file">
@@ -194,9 +235,9 @@
     
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/10/21/LearnDoc/杂项/vacode备忘/" class="file">
+                            <a href="/2024/10/21/LearnDoc/杂项/vacode设置备忘/" class="file">
                                 <i class="fa fa-file"></i>
-                                vacode备忘
+                                vacode设置备忘
                             </a>
                         </li>
                     </ul>
@@ -212,9 +253,9 @@
     
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/12/04/LearnDoc/杂项/小工具接口/" class="file">
+                            <a href="/2024/12/04/LearnDoc/杂项/小工具/" class="file">
                                 <i class="fa fa-file"></i>
-                                小工具接口
+                                小工具
                             </a>
                         </li>
                     </ul>
@@ -402,22 +443,20 @@
 <p>1234567对应
 主音，上主音，中音，下属音，属音，下中音，导音其中145是其和声功能的音，因为145在音程上是完全协和音</p>
 <h3 id="节拍">节拍</h3>
-<pre><code>m/n 拍： 以n分音符为一拍，每小节m拍</code></pre>
-<h4 id="强弱关系">强弱关系</h4>
-<pre><code>节拍的强弱并不指鼓点的强弱，是指这一排对整体的控制性，或者说拍子的关键性，例如强拍一般是指新的和旋开始的地方
-4/4拍 强 弱 次强 弱
-2/4拍 强 弱
-3/4拍 强 弱 弱
-6/8拍 强 弱 弱 次强 弱 弱</code></pre>
-<h4 id="节拍时长">节拍时长</h4>
-<pre><code>四分音符的长度为一拍；
-全音符： 四拍
-二分音符： 二拍
-八分音符： 二分之一拍</code></pre>
-<h4 id="音乐速度-bpm">音乐速度 bpm</h4>
-<pre><code>bpm是120，意思就是每分钟120拍</code></pre>
-<h3 id="切分音">切分音</h3>
-<p>在音符区域内不从起点开始，但经过了中间，就是切分音</p>
+<ul>
+<li>m/n 拍： 以n分音符为一拍，每小节m拍 #### 强弱关系</li>
+<li>节拍的强弱并不指鼓点的强弱，是指这一排对整体的控制性，或者说拍子的关键性，例如强拍一般是指新的和旋开始的地方</li>
+<li>4/4拍 强 弱 次强 弱</li>
+<li>2/4拍 强 弱</li>
+<li>3/4拍 强 弱 弱</li>
+<li>6/8拍 强 弱 弱 次强 弱 弱 #### 节拍时长</li>
+<li>四分音符的长度为一拍；</li>
+<li>全音符： 四拍</li>
+<li>二分音符： 二拍</li>
+<li>八分音符： 二分之一拍 #### 音乐速度 bpm</li>
+<li>bpm是120，意思就是每分钟120拍 ### 切分音
+在音符区域内不从起点开始，但经过了中间，就是切分音,总而言之就是音符节奏抢在强拍前面的音</li>
+</ul>
 <h3 id="简谱">简谱</h3>
 <p>数字下面有横线，音符时长减半
 数字后面有点，附点音符，音符时长加原音符时长的一般
@@ -431,17 +470,290 @@
 保持音：数字上面有个横线，表示这个音要保持音量直到小节结束
 三连音：3个数字上面有个弧线中间有个3，表示将当前音符平均分成3份</p>
 <h3 id="大小调的定义">大小调的定义</h3>
-<pre><code>大调规律： 主音1开始 全 全 半 全 全 全 半
-小调规律： 主音6开始 全 半 全 全 半 全 全</code></pre>
+<ul>
+<li>大调规律： 主音1开始 全 全 半 全 全 全 半</li>
+<li>小调规律： 主音6开始 全 半 全 全 半 全 全</li>
+</ul>
+<h3 id="调式色彩">调式色彩</h3>
+<ul>
+<li>大调：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>调式</th>
+<th>色彩</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C大调</td>
+<td>纯净、中立、朴素、自然、天真</td>
+</tr>
+<tr>
+<td>C#/Db大调</td>
+<td>神秘、奢华、忧郁中的光辉、梦幻感</td>
+</tr>
+<tr>
+<td>D大调</td>
+<td>光辉、胜利、庄严、英雄气质</td>
+</tr>
+<tr>
+<td>Eb大调</td>
+<td>崇高、英雄的悲壮、温柔又强大</td>
+</tr>
+<tr>
+<td>E大调</td>
+<td>华丽、戏剧性、激情、闪耀感</td>
+</tr>
+<tr>
+<td>F大调</td>
+<td>温暖、田园、宁静、亲切感</td>
+</tr>
+<tr>
+<td>F#/Gb大调</td>
+<td>华丽又脆弱、忧郁与希望交织、梦幻</td>
+</tr>
+<tr>
+<td>G大调</td>
+<td>平衡、明朗、轻快、活泼、亲和</td>
+</tr>
+<tr>
+<td>Ab大调</td>
+<td>高贵、庄重、略带沉思感、神圣感</td>
+</tr>
+<tr>
+<td>A大调</td>
+<td>欢快、光明、充满希望与活力</td>
+</tr>
+<tr>
+<td>Bb大调</td>
+<td>威严、温柔、有深度的安详</td>
+</tr>
+<tr>
+<td>B大调</td>
+<td>炽热、激情、深邃、宗教般的虔诚感</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>小调：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>调式</th>
+<th>色彩</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A小调</td>
+<td>天真哀伤、柔和忧郁、质朴（无升降号）</td>
+</tr>
+<tr>
+<td>Bb小调</td>
+<td>深沉哀伤、痛苦、宿命感</td>
+</tr>
+<tr>
+<td>B小调</td>
+<td>崇高的悲剧、柔中带刚、内在抗争</td>
+</tr>
+<tr>
+<td>C小调</td>
+<td>悲壮、命运感、英雄式抗争</td>
+</tr>
+<tr>
+<td>C#小调</td>
+<td>黑暗的抒情、痛苦、迷失</td>
+</tr>
+<tr>
+<td>D小调</td>
+<td>崇高的哀伤、庄严、悲情中的尊严</td>
+</tr>
+<tr>
+<td>Eb小调</td>
+<td>阴沉绝望、悲苦无声、毁灭感</td>
+</tr>
+<tr>
+<td>E小调</td>
+<td>忧郁的抒情、怀旧、温柔</td>
+</tr>
+<tr>
+<td>F小调</td>
+<td>压抑、挣扎、不可言说的痛苦</td>
+</tr>
+<tr>
+<td>F#小调</td>
+<td>神秘哀伤、脆弱又隐忍</td>
+</tr>
+<tr>
+<td>G小调</td>
+<td>伤感、坚定、内敛的悲伤</td>
+</tr>
+<tr>
+<td>G#/Ab小调</td>
+<td>极度悲剧、抽象的痛苦、梦魇感</td>
+</tr>
+</tbody>
+</table>
+<h4 id="调式音阶">调式音阶</h4>
+<ul>
+<li>不需要死记硬背，按照五度循环圈(4736251)的方式来推导，每过一个五度音多一个升降号</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>调式</th>
+<th>音阶</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C大调</td>
+<td>C - D - E - F - G - A - B</td>
+</tr>
+<tr>
+<td>G大调</td>
+<td>G - A - B - C - D - E - F#</td>
+</tr>
+<tr>
+<td>D大调</td>
+<td>D - E - F# - G - A - B - C#</td>
+</tr>
+<tr>
+<td>A大调</td>
+<td>A - B - C# - D - E - F# - G#</td>
+</tr>
+<tr>
+<td>E大调</td>
+<td>E - F# - G# - A - B - C# - D#</td>
+</tr>
+<tr>
+<td>B大调</td>
+<td>B - C# - D# - E - F# - G# - A#</td>
+</tr>
+<tr>
+<td>F#大调</td>
+<td>F# - G# - A# - B - C# - D# - E#</td>
+</tr>
+<tr>
+<td>C#大调</td>
+<td>C# - D# - E# - F# - G# - A# - B#</td>
+</tr>
+<tr>
+<td>F大调</td>
+<td>F - G - A - Bb - C - D - E</td>
+</tr>
+<tr>
+<td>Bb大调</td>
+<td>Bb - C - D - Eb - F - G - A</td>
+</tr>
+<tr>
+<td>Eb大调</td>
+<td>Eb - F - G - Ab - Bb - C - D</td>
+</tr>
+<tr>
+<td>Ab大调</td>
+<td>Ab - Bb - C - Db - Eb - F - G</td>
+</tr>
+<tr>
+<td>Db大调</td>
+<td>Db - Eb - F - Gb - Ab - Bb - C</td>
+</tr>
+<tr>
+<td>Gb大调</td>
+<td>Gb - Ab - Bb - Cb - Db - Eb - F</td>
+</tr>
+<tr>
+<td>Cb大调</td>
+<td>Cb - Db - Eb - Fb - Gb - Ab - Bb</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>小调：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>调式</th>
+<th>色彩</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A小调</td>
+<td>A - B - C - D - E - F - G</td>
+</tr>
+<tr>
+<td>E小调</td>
+<td>E - F# - G - A - B - C - D</td>
+</tr>
+<tr>
+<td>B小调</td>
+<td>B - C# - D - E - F# - G - A</td>
+</tr>
+<tr>
+<td>F#小调</td>
+<td>F# - G# - A - B - C# - D - E</td>
+</tr>
+<tr>
+<td>C#小调</td>
+<td>C# - D# - E - F# - G# - A - B</td>
+</tr>
+<tr>
+<td>G#调</td>
+<td>G# - A# - B - C# - D# - E - F#</td>
+</tr>
+<tr>
+<td>D#小调</td>
+<td>D# - E# - F# - G# - A# - B - C#</td>
+</tr>
+<tr>
+<td>A#小调</td>
+<td>A# - B# - C# - D# - E# - F# - G#</td>
+</tr>
+<tr>
+<td>D小调</td>
+<td>D - E - F - G - A - Bb - C</td>
+</tr>
+<tr>
+<td>G小调</td>
+<td>G - A - Bb - C - D - Eb - F</td>
+</tr>
+<tr>
+<td>C小调</td>
+<td>C - D - Eb - F - G - Ab - Bb</td>
+</tr>
+<tr>
+<td>F小调</td>
+<td>F - G - Ab - Bb - C - Db - Eb</td>
+</tr>
+<tr>
+<td>Bb小调</td>
+<td>Bb - C - Db - Eb - F - Gb - Ab</td>
+</tr>
+<tr>
+<td>Eb小调</td>
+<td>Eb - F - Gb - Ab - Bb - Cb - Db</td>
+</tr>
+<tr>
+<td>Ab小调</td>
+<td>Ab - Bb - Cb - Db - Eb - Fb - Gb</td>
+</tr>
+</tbody>
+</table>
 <h4 id="中国民乐调试-宫商角徵羽">中国民乐调试 宫商角徵羽</h4>
-<pre><code>五声调式
-1 2 3 5 6</code></pre>
-<h4 id="外国民乐调式">外国民乐调式</h4>
-<pre><code>日本五声平调 6 7 1 3 4 6
-蓝调布鲁斯大调 1 2 b3 3 5 6 b7 1
-印度： 1 2 3 4 5 b6 b7 1
-西班牙 3 4 #5 6 7 1 2 3
-阿拉伯 1 b2 3 4 5 b6 b7 1</code></pre>
+<ul>
+<li>五声调式</li>
+<li>1 2 3 5 6 #### 外国民乐调式</li>
+<li>日本五声平调 6 7 1 3 4 6</li>
+<li>蓝调布鲁斯大调 1 2 b3 3 5 6 b7 1</li>
+<li>印度： 1 2 3 4 5 b6 b7 1</li>
+<li>西班牙 3 4 #5 6 7 1 2 3</li>
+<li>阿拉伯 1 b2 3 4 5 b6 b7 1</li>
+</ul>
 <h3 id="音程">音程</h3>
 <p>值两个音之间的距离，在音程下方的低音叫根音，上面的音叫冠音
 上下两个音全是白键，就是大X度 有黑健，就是小键
@@ -478,14 +790,14 @@
 关于为什么三和弦会很和谐：根音和五音构成了纯五度，纯五度是完全协和音程，所以三和弦会很和谐</p>
 <h4 id="七和弦">七和弦</h4>
 <p>在三和弦的基础上再加三度构成的和弦 - 大七和弦 -
-大小七和弦（属七和弦）：大三和弦 + 小三度 //c7 - 小大七和弦： 小三和弦 +
+大小七和弦（属七和弦）：大三和弦 + 小三度 // - 小大七和弦： 小三和弦 +
 大三度（很少用，不全在调内） - 小七和弦： 小三和弦 + 小三度 Cm7 -
 减七和弦： 减三和弦 + 小三度 // cdim7 以1
 4（CF）为根音的调内和弦叫大七和弦 以2 3
 6（DEA）为根音的调内和弦叫小七和弦
-以5（G）为根音的调内和弦叫大小七和弦</p>
+以5（G）为根音的调内和弦叫大小七和弦,也叫属七和弦，因为有一个小七度的音，导致很不稳定，会有强烈的向稳定的和弦靠拢的趋势，是使用最频繁的七和弦</p>
 <h4 id="更高的和弦">更高的和弦</h4>
-<p>三度三度网上叠加</p>
+<p>三度三度往上叠加</p>
 <h4 id="和弦转位">和弦转位</h4>
 <p>把和弦的音移动八度，注意转位后根音还是根音，三音还是三音，五音还是五音，不会因为相对位置的改变而改变
 用途： 把不和谐音程淡化不和谐 声部避让 转到乐器合理的音区 例：
@@ -539,25 +851,28 @@ C-Am, F-Dm， G-Em
 <li><p>和弦音主次原理：
 由于三和弦的稳定性最大程度取决于根音和五音形成的纯五度，所以三和弦的三个音的主次排序为：根音&gt;五音&gt;三音，因此三音可以被用来挂留</p></li>
 </ul>
-<h3 id="实用的和弦公式">实用的和弦公式</h3>
+<h3 id="实用的和弦连接公式">实用的和弦连接公式</h3>
 <ul>
 <li>2-5-1
-连接：用来和弦衔接的公式，以目标和弦为主和弦，寻找其二级小三和弦和五级七和弦（属七和弦可以定调）构成的和弦连接，其中1是目标和弦，前面放对应的2和5来做衔接</li>
+连接（Dm-G-C）：用来和弦衔接的公式，以目标和弦为主和弦(1)，寻找其二级小三和弦(二级和弦只有下属功能)和五级七和弦（属七和弦可以定调）构成的和弦连接，其中1是目标和弦，前面放对应的2和5来做衔接</li>
 <li>Fm-C
 利用Fm（F的小三和弦）向C倾向的原理，用Fm替换属七和弦执行连接主和弦的功能</li>
-<li>三全音替代 利用三全音进行特殊的属七和弦的替代DJ'</li>
+<li>三全音替代/降二代五 利用三全音进行特殊的属七和弦的替代D</li>
+<li>减三和弦连接，在两个和弦之间加个减三和弦</li>
+<li>辉煌终止</li>
 </ul>
 <h3 id="常用的流行和弦套路">常用的流行和弦套路</h3>
 <ul>
 <li>卡农和弦 15634145， 卡农下行，根音按顺序下行：17654325， 小调下行
 65432173</li>
-<li>五度圈和弦 4736251</li>
+<li>五度圈和弦 4736251,从4开始五度五度的顺次推下去</li>
 <li>1645</li>
+<li>1245</li>
 </ul>
 <h3 id="快速配和弦的方法">快速配和弦的方法</h3>
 <ul>
 <li>寻找分解和弦的感觉，快速定位和弦音</li>
-<li>根据和弦功能原理快速尝试某些和弦</li>
+<li>根据和弦功能原理快速尝试某些和弦（主-下属-属（属七和弦）-主）</li>
 <li>根据旋律音来快速定位和旋</li>
 <li>常用和弦套路套用</li>
 </ul>
@@ -566,7 +881,6 @@ C-Am, F-Dm， G-Em
 <li>和弦形式不宜一味追求高级与复杂，要让恰当的和弦出现在恰当的位置</li>
 <li>和弦数量不宜太多，多数小节只需要一个和弦，个别小节可以添加装饰和弦</li>
 <li>和弦编配要以旋律为本</li>
-<li>他妈的别人的建议都是狗屎，自己觉得好听才是好听！！！！！</li>
 </ul>
 <h3 id="和弦转调">和弦转调</h3>
 <ul>

@@ -166,11 +166,31 @@
                         </li>
                     </ul>
     
+                            </li>
+                            
+                        </ul>
+    
+                        <ul class="directoryui">
+                            <li class="directory">
+                                <a href="#" class="directory">
+                                    <i class="fa fa-folder"></i>
+                                    工具
+                                </a>
+                                
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/07/31/LearnDoc/图形学/虎书笔记/" class="file">
+                            <a href="/2025/07/07/LearnDoc/工具/字符串快速匹配(字典树形式的自动机)/" class="file">
                                 <i class="fa fa-file"></i>
-                                虎书笔记
+                                字符串快速匹配(字典树形式的自动机)
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="fileui">
+                        <li class="file">
+                            <a href="/2024/12/04/LearnDoc/工具/小工具/" class="file">
+                                <i class="fa fa-file"></i>
+                                小工具
                             </a>
                         </li>
                     </ul>
@@ -188,9 +208,9 @@
                                 
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/08/05/LearnDoc/数学基础/数值分析学习/" class="file">
+                            <a href="/2025/07/07/LearnDoc/数学基础/数值分析/" class="file">
                                 <i class="fa fa-file"></i>
-                                数值分析学习
+                                数值分析
                             </a>
                         </li>
                     </ul>
@@ -253,9 +273,9 @@
     
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/12/04/LearnDoc/杂项/小工具/" class="file">
+                            <a href="/2025/08/25/LearnDoc/杂项/随手记/" class="file">
                                 <i class="fa fa-file"></i>
-                                小工具
+                                随手记
                             </a>
                         </li>
                     </ul>
@@ -318,25 +338,14 @@
                                     游戏服务器
                                 </a>
                                 
-                        <ul class="directoryui-child">
-                            <li class="directory">
-                                <a href="#" class="directory">
-                                    <i class="fa fa-folder"></i>
-                                    wawawawa
-                                </a>
-                                
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/08/27/LearnDoc/游戏服务器/wawawawa/ddddd/" class="file">
+                            <a href="/2025/08/26/LearnDoc/游戏服务器/c++lua(sol)/" class="file">
                                 <i class="fa fa-file"></i>
-                                ddddd
+                                c++lua(sol)
                             </a>
                         </li>
                     </ul>
-    
-                            </li>
-                            
-                        </ul>
     
                     <ul class="fileui">
                         <li class="file">
@@ -416,9 +425,9 @@
     
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/08/06/LearnDoc/编曲/音乐风格/" class="file">
+                            <a href="/2025/07/08/LearnDoc/编曲/编曲原理/" class="file">
                                 <i class="fa fa-file"></i>
-                                音乐风格
+                                编曲原理
                             </a>
                         </li>
                     </ul>
@@ -600,6 +609,21 @@ x\\y\\z \\1
 x \cdot sx\\y \cdot sy\\z \cdot sz \\1
 \end{bmatrix}\\
 \]</span></p>
+<h2 id="矩阵的逆">矩阵的逆</h2>
+<p>逆矩阵可以把原矩阵的变换还原回去</p>
+<h2 id="转置矩阵">转置矩阵</h2>
+<p>如果矩阵A表示从A到B的空间变换，A的转置就表示将方向信息B到A的变换
+矩阵转置是抱持点积不变的情况下，把变换转移到另一个向量上</p>
+<h2 id="正交矩阵">正交矩阵</h2>
+<p>正交矩阵的列是一个新的坐标系的基地，正交矩阵一般用来表示一组正交基，可以看作是新的坐标系变换</p>
+<h2 id="坐标空间">坐标空间</h2>
+<ul>
+<li>模型空间 以模型自身为中心</li>
+<li>世界空间 放入所有模型的最外围的世界的坐标空间</li>
+<li>观察空间 相机空间，以相机为中心</li>
+<li>剪裁空间 最后投影变换后的空间</li>
+<li>屏幕空间 最后呈现在屏幕上的2d坐标系统</li>
+</ul>
 <h3 id="mvp矩阵">MVP矩阵</h3>
 <p>MVP矩阵即 Model View Projection，分别是模型矩阵，视图矩阵，投影矩阵 -
 模型矩阵负责将模型空间下的点转移到世界空间下 -
@@ -607,8 +631,6 @@ x \cdot sx\\y \cdot sy\\z \cdot sz \\1
 投影矩阵负责将世界空间压缩到一个单位为1的投影空间下，以表示正交或透视投影下的剪裁空间坐标
 -
 最后会统一除以w，得到归一化的齐次剪裁空间的坐标（NDC），交由GPU处理最后获得屏幕上的像素坐标</p>
-<h2 id="矩阵的逆">矩阵的逆</h2>
-<p>逆矩阵可以把原矩阵的变换还原回去</p>
 
 </div>
 

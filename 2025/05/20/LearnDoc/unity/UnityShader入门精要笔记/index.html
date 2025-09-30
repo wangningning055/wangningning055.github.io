@@ -166,11 +166,31 @@
                         </li>
                     </ul>
     
+                            </li>
+                            
+                        </ul>
+    
+                        <ul class="directoryui">
+                            <li class="directory">
+                                <a href="#" class="directory">
+                                    <i class="fa fa-folder"></i>
+                                    工具
+                                </a>
+                                
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/07/31/LearnDoc/图形学/虎书笔记/" class="file">
+                            <a href="/2025/07/07/LearnDoc/工具/字符串快速匹配(字典树形式的自动机)/" class="file">
                                 <i class="fa fa-file"></i>
-                                虎书笔记
+                                字符串快速匹配(字典树形式的自动机)
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="fileui">
+                        <li class="file">
+                            <a href="/2024/12/04/LearnDoc/工具/小工具/" class="file">
+                                <i class="fa fa-file"></i>
+                                小工具
                             </a>
                         </li>
                     </ul>
@@ -188,9 +208,9 @@
                                 
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/08/05/LearnDoc/数学基础/数值分析学习/" class="file">
+                            <a href="/2025/07/07/LearnDoc/数学基础/数值分析/" class="file">
                                 <i class="fa fa-file"></i>
-                                数值分析学习
+                                数值分析
                             </a>
                         </li>
                     </ul>
@@ -253,9 +273,9 @@
     
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/12/04/LearnDoc/杂项/小工具/" class="file">
+                            <a href="/2025/08/25/LearnDoc/杂项/随手记/" class="file">
                                 <i class="fa fa-file"></i>
-                                小工具
+                                随手记
                             </a>
                         </li>
                     </ul>
@@ -318,25 +338,14 @@
                                     游戏服务器
                                 </a>
                                 
-                        <ul class="directoryui-child">
-                            <li class="directory">
-                                <a href="#" class="directory">
-                                    <i class="fa fa-folder"></i>
-                                    wawawawa
-                                </a>
-                                
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/08/27/LearnDoc/游戏服务器/wawawawa/ddddd/" class="file">
+                            <a href="/2025/08/26/LearnDoc/游戏服务器/c++lua(sol)/" class="file">
                                 <i class="fa fa-file"></i>
-                                ddddd
+                                c++lua(sol)
                             </a>
                         </li>
                     </ul>
-    
-                            </li>
-                            
-                        </ul>
     
                     <ul class="fileui">
                         <li class="file">
@@ -416,9 +425,9 @@
     
                     <ul class="fileui">
                         <li class="file">
-                            <a href="/2024/08/06/LearnDoc/编曲/音乐风格/" class="file">
+                            <a href="/2025/07/08/LearnDoc/编曲/编曲原理/" class="file">
                                 <i class="fa fa-file"></i>
-                                音乐风格
+                                编曲原理
                             </a>
                         </li>
                     </ul>
@@ -522,10 +531,14 @@ Effect创建一个屏幕后处理shader，Compute创建专门用来进行GPU并�
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs shaderlab">Shader &quot;ShaderName&quot;<br>&#123;<br>	Properties //属性<br>	&#123;<br><br>	&#125;<br>	SubShader //显卡1使用的子着色器<br>	&#123;<br><br>	&#125;<br>	SunShader //显卡2使用的子着色器<br>	&#123;<br><br>	&#125;<br>	Fallback &quot;VertexLit&quot;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
 <h3 id="properties块">Properties块</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs shaderlab">  Properties<br>  &#123;<br>//这里声明以后，就可以在外面的材质面板进行控制<br>//Properties块里面的属性主要是为了将控制暴露在外，在具体的着色器代码块中还需要再声明一次才能和这里的属性建立连接<br>//前面的_XXX是让代码使用的，后面的&quot;&quot;里面的内容是外面材质面板显示的名字，逗号后面的参数是属性类型，等号右边是默认值<br>_MainTex (&quot;Texture&quot;, 2D) = &quot;white&quot; &#123;&#125;<br>_Int(&quot;intTest&quot;, Int) = 3<br>_Float(&quot;floatTest&quot;, Float) = 1.1<br>_Color(&quot;colorTest&quot;, Color) = (1,1,1,1)<br>_Float4(&quot;float4Test&quot;, Vector) = (1,1,1,1)<br>_Range(&quot;rangeTest&quot;, Range(5, 0)) = 1<br>_TestTex(&quot;TextureTest&quot;, 2D) = &quot;white&quot;&#123;&#125; //前面的&quot;&quot;中放的是unity的默认纹理，后面的&#123;&#125;通常留空即可<br>_TestTex(&quot;TextureTest&quot;, 2D) = &quot;black&quot;&#123;&#125; //<br>_TestTex(&quot;TextureTest&quot;, 2D) = &quot;gray&quot;&#123;&#125; //<br>_TestTex(&quot;TextureTest&quot;, 2D) = &quot;bump&quot;&#123;&#125; //bump指的是法线贴图<br>  &#125;<br><br></code></pre></td></tr></table></figure>
-<p>x - x -| x x - x|</p>
 <h3 id="subshader-块">SubShader 块</h3>
+<pre><code>一个unity Shader文件可以包含多个SubShader，执行shader时，会从上到下执行subShader，找到第一个可以运行的运行，SubShader里面包括了渲染状态的设置，Tags,Lod,和多个Pass</code></pre>
 <h3 id="fallback块">FallBack块</h3>
 <p>当所有的SubShader都必能在当前的平台上运行，就会选择FallBack块指定的Shader来渲染</p>
+<h3 id="shader基础结构示例">Shader基础结构示例</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs shaderlab"><br>Shader &quot;ShaderLearn/ShaderLearn1&quot;	//这里决定了shader在材质shader选择的位置<br>&#123;<br>    Properties<br>    &#123;<br>		//Properties块里面的属性主要是为了将控制暴露在外，在具体的着色器代码块中还需要再声明一次才能和这里的属性建立连接<br>		//前面的_Name是让代码使用的，后面的&quot;&quot;里面的内容是外面材质面板显示的名字，逗号后面的参数是属性类型<br>		_MainTex (&quot;Texture&quot;, 2D) = &quot;white&quot; &#123;&#125;<br>		_Int(&quot;intTest&quot;, Int) = 3<br>		_Float(&quot;floatTest&quot;, Float) = 1.1<br>		_Color(&quot;colorTest&quot;, Color) = (1,1,1,1)<br>		_Float4(&quot;float4Test&quot;, Vector) = (1,1,1,1)<br>		_Range(&quot;rangeTest&quot;, Range(5, 0)) = 1<br>		_TestTex1(&quot;TextureTest1&quot;, 2D) = &quot;white&quot;&#123;&#125; //前面的&quot;&quot;中放的是unity的默认纹理，后面的&#123;&#125;通常留空即可<br>		_TestTex2(&quot;TextureTest2&quot;, 2D) = &quot;black&quot;&#123;&#125; //<br>		_TestTex3(&quot;TextureTest3&quot;, 2D) = &quot;gray&quot;&#123;&#125; //<br>		_TestTex4(&quot;TextureTest4&quot;, 2D) = &quot;bump&quot;&#123;&#125; //bump指的是法线贴图<br><br>    &#125;<br>	SubShader<br>	&#123;<br>		//一个unity Shader文件可以包含多个SubShader，执行shader时，会从上到下执行subShader，找到第一个可以运行的运行，SubShader里面包括了渲染状态的设置，Tags,Lod,和多个Pass<br><br>		//SubShader设置渲染状态<br>		ZWrite On //深度测试<br>		ZTest Less //默认，深度值小于才写入，LEqual，小于等于<br>		Cull Back //剔除设置<br>		ColorMask RGB //只写入RGB， 0表示只写深度， A表示只写透明通道<br>		Blend One One // 混合模式，alpha混合，加法混合（发光）， 乘法混合，关闭混合<br>		BlendOp Add //混合运算方式<br>		Offset 1, 1 // Z-fighting,阴影投射，描边, 第一个参数与多边形斜率有关，第二个参数是添加到最终深度的固定偏移<br><br>		Stencil //模板缓冲设置<br>		&#123; <br>			Ref 1<br>			Comp Equal<br>			Pass Replace<br>		&#125;<br><br>		//SubShader Tags<br>		//一个SubShader对应一个Tags，内容是键值对，用来告诉渲染引擎该怎样以及何时来渲染对象<br>		Tags<br>		&#123;<br>			&quot;Queue&quot; = &quot;Transparent&quot;			//渲染队列，<br>			&quot;RenderType&quot; = &quot;Opaque&quot;			//渲染类型<br>			&quot;DisableBatching&quot; = &quot;false&quot;		//是否使用批处理<br>			&quot;FalseNoShadowCasting&quot; = &quot;false&quot;//是否会投射阴影<br>			&quot;IgnoreProjector&quot; = &quot;false&quot;		//是否接收投射的阴影，通常用于半透明物体<br>			&quot;CanUseSpriteAtlas&quot; = &quot;true&quot;	//是否用于Sprite<br>			&quot;PreviewType&quot; = &quot;Cube&quot;			//预览面板的形状<br><br>			//Queue介绍：<br>			//决定对象在整体场景中的渲染顺序<br>			//Background	1000	最先渲染，用于天空盒或远景背景<br>			//Geometry	2000	默认值，大多数不透明物体（Opaque）使用<br>			//AlphaTest	2450	透明度裁剪对象（如树叶、网格 UI）<br>			//Transparent 3000	半透明对象，后渲染，前面的需先绘制<br>			//Overlay		4000	最后渲染，常用于 UI、光晕、轮廓、遮罩等<br>			//Tags &#123; &quot;Queue&quot; = &quot;Transparent+10&quot; &#125; 表示在普通的Transparent之后渲染<br><br>			//RenderType介绍：<br>			//对着色器进行分类，还可以用于着色器替换功能，方便管线进行判断和剔除以及各种后处理效果<br>			//Opaque					不透明材质（默认）<br>			//Transparent				半透明材质<br>			//TransparentCutout		使用透明度遮罩裁剪（clip()）<br>			//Background				用于天空盒、远景<br>			//Overlay					UI、顶层效果<br>			//TreeOpaque				树木模型，不透明部分<br>			//TreeTransparentCutout	树木使用透明度裁剪<br>			//Grass					草地模型<br>		&#125;<br><br>		LOD 100 //LOD表示了当前shader的复杂度等级，由此来让之后的不同版本进行shader切换<br><br>		//pass会有很多个，会挨个执行，一个pass代表一次draw call，是一次完整的渲染管线调度，因此尽量不要写太多的pass<br>		Pass<br>		&#123;<br>			Name &quot;MYPASS&quot; //Pass命名<br>			//UsePass(ShaderLearn/MYPASS) 可以直接通过UsePass通过Pass名称来使用已有的Pass,注意全大写<br><br>			//Pass里面也可以进行状态设置，Pass里面的状态设置会覆盖调SubShader里面的状态设置<br>			ZWrite Off //深度测试<br><br>			//Pass里面也有tags，和SubShader的Tags不同，有属于自己的Tags<br>			Tags<br>			&#123;<br>				&quot;LightMode&quot; = &quot;ShadowCaster&quot; //<br>			&#125;<br><br>			//被CGPROGRAM和ENDCG包起来的就是hlsl的代码了，准确的来说并不是hlsl代码，是类似与hlsl核心语法的unity提供的特殊语言<br>			CGPROGRAM<br>				//以下简介了这种语言的语法<br><br>				#pragma vertex vert //指定哪个函数是顶点着色器函数，<br>				#pragma fragment frag //哪个函数是片元着色器函数<br>				//include用来包含一些unity提供的函数，也可以自行定义一些include<br>				#include &quot;UnityCG.cginc&quot;				//通用函数库，包含顶点变换函数，常用数学工具等<br>				#include &quot;UnityShaderVariables.cginc&quot;	//定义了一些全局变量<br>				#include &quot;Lighting.cginc&quot;				//光照相关<br>				#include &quot;AutoLight.cginc&quot;				//用来处理光照贴图<br>				float aaa;<br>				float4 float4_1;<br>				vector vec1; //vector包含四个float<br><br>				float4 float4test = &#123;1.0f, 2.0f, 3.0f, 4.0f&#125;;<br>				float3 float3Test = float4test.xxy; //按位置赋值（swizzles）,float3的内容是（1.0， 1.0， 2.0）<br>				<br>				float4x4 matrixTest; //声明矩阵<br>				matrix&lt;int, 2, 2&gt; matrixTest2;<br>				matrix matrixTest3; //表示float4x4<br><br><br>				matrixTest = &#123;1,2,3,4&#125;; //矩阵赋值<br>				float2 matrixData = matrixTest_11_12; //矩阵取值（swizzles）<br>				float matrixData2 = matrixTest[0][1];<br><br>				//向量，矩阵乘法<br>				float4 vec11 = 3 * float4_1;<br>				matrix matrix_mul = mul(matrix, float4_1); //向量与矩阵的乘法需要mul函数<br><br>				float3 arry1[100] //声明数组<br><br>				struct structTest //结构体<br>				&#123;<br>					float a;<br>					float b;<br>				&#125;<br>				//这里面也可以使用if else和while，但是并不推荐，并行计算遇到if else，会先执行if的像素，再执行else的像素，实际变成了串行的两个分支，期间被屏蔽的像素<br>				//依然占用资源,while也一样，GPU得等最慢迭代次数最多的跑完才行，浪费性能，同时编译器可能展开大量指令，所以并不推荐添加这些分支循环逻辑<br>				//实在要用的话用[branch][flatten]，[loop]、[unroll]来控制展开和分化<br><br><br>				//函数只支持值传递，只有内联函数，支持in，out关键字，inout既能输入也能输出<br>				bool func(in a, out b， inout c)<br>				&#123;<br><br>					float a;<br><br>					return false;<br>				&#125;<br><br>				//提供了大量的全局函数来进行计算<br>				float3 vecA;<br>				float3 vecB;<br>				cross(vecA, vecB);<br>				cos(aaa);<br>				ceil(aaa);<br>				atan(aaa);<br><br>				//语义，告诉GPU这个变量要从哪里拿取数据进行填充，语义会有POSITION0，POSITION1等等，这些是语义索引，用来区分多个同类型数据<br><br>				//下面的语义表示在顶点着色器输入阶段的语义，代表来自mesh的数据，通常在结构体里面<br>				struct appdata<br>				&#123;<br>					float4 vertex : POSITION;		//顶点位置，<br>					float3 normal : NORMAL;			//顶点法线<br>					float4 tangent :TANGENT;		//顶点切线<br>					float4 color : COLOR;			//顶点颜色<br>					float2 uv1 : TEXCOORD0;			//n套uv坐标<br>					float2 uv2 : TEXCOORD1;			//n套uv坐标<br>					float3 binormal : BINORMAL;		//顶点副切线<br>					float3 weight : BLENDWEIGHTS;	//骨骼权重<br>					float3 indices : BLENDINDICES;	//骨骼索引<br>				&#125;<br><br>				//下面的语义表示在顶点着色器输出-片元着色器输入的阶段，这个时候顶点着色器的输出已经经过了三角形设置和三角形遍历的光栅化处理，一般用在vertex shader的输出结构中<br>				struct v2f&#123;<br>					float4 pos : SV_POSITION;		//裁剪空间的顶点位置<br>					float2 uv : TEXCOORD;			//自定义插值数据<br>					float4 col : COLOR;				//插值后的颜色数据<br>					float3 normal : NORMAL;			//插值后的法线数据<br>					float4 output : TANGENT;		//插值后的切线数据<br>				&#125;<br><br>				//这个是片元着色器函数的名称，输入上面的填有顶点着色器语义的结构体appdata，输出填有顶点输出-片元输入语义的结构体v2f<br>				v2f vert(appdata v)<br>				&#123;<br>					v2f o;<br>					return o;<br>				&#125;<br><br>				// 下面的语义的片元着色器的输出语义，同时也是片元着色器的函数<br>				fixed4 frag(v2f o) : SV_TARGET //输出颜色fixed4表示低精度，常用来颜色输出<br>				&#123;<br>					return o.col;<br>				&#125;<br>				float frag(v2f o) : SV_DEPTH //输出深度<br>				&#123;<br>					return o.deph;<br>				&#125;<br><br>				//下面是系统语义<br>				float4 pos : SV_POSITION			//剪裁空间的顶点位置，用于顶点着色器的输出<br>				float depth : SV_DEPTH				//深度值<br>				uint sampleIndex : SV_SAMPLEINDEX	//当前采样点的索引<br>				uint vertexID : SV_VERTEXID			//当前顶点的索引<br>				uint instanceID : SV_INSTANCEID		//当前实例的索引<br>				bool isFrontFace : SV_ISFRONTFACE	//当前片元是否为正面<br><br>			ENDCG<br>			<br><br>			//unity 内置变换矩阵和相机参数<br>		&#125;<br><br>	&#125;<br>&#125;<br><br><br></code></pre></td></tr></table></figure>
+<h2 id="shader实例">shader实例</h2>
+<h3 id="最简单的顶点片元着色器">最简单的顶点片元着色器</h3>
 
 </div>
 
